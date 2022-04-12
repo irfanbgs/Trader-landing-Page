@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navigation{
+    background-color: #313e7f;
+    padding: 13px 3px;
+    font-family: 'Merriweather', serif;
+}
+#navigation ul{
+    display: flex;
+    justify-content: center;
+}
+#navigation li{
+    list-style: none;
+
+}
+#navigation li a{
+    text-decoration: none;
+    color: white;
+    margin: 2px 3px;
+    padding: 2px 20px;
+
+}
+
+#IntroSection{
+    padding-bottom: 80px;
+    height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background: url(../static/bg.jpg) no-repeat center center/cover;
+    opacity: 0.8;
+}
+
+#mainHeading{
+    font-size: 50px;
+    color: tomato;
+    padding: 7px 3px;
+    font-family: 'Rubik', sans-serif;
+}
+
+#subHeading{
+    font-family: sans-serif;
+}
+
+#Sponser{
+    height: 300px;
+    background-color: yellow;
+    
+}
+
+#Footer{
+    height: 100px;
+    background-color: black;
+
+}

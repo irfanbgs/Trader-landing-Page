@@ -1,0 +1,23 @@
+//- index.pug
+doctype html
+html
+  head
+    style
+      include ../static/style.css
+  body
+    nav#navigation 
+        ul
+            li #[a(href="/") Home]
+            li #[a(href="/") Services]
+            li #[a(href="/") About us]
+            li #[a(href="/") Class Info]
+            li #[a(href="/") Contact]
+    section#IntroSection 
+        div#mainHeading Trading Trek
+        div#subHeading Learn Trading the Simple Way
+    section#Sponser 
+        | section for Sponser
+    section#Footer 
+        | section for Footer
+    script
+      include ../static/index.js
