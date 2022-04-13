@@ -9,4 +9,12 @@ block style
         include ../static/contactStyle.css
 
 block content 
-    h1 Join the Best Trading Community
+    div.container
+        h1 Join the Best Trading Community
+        form(action="/contact", method ="post", class ="myForm") 
+            input(type="text",class="myInput",name ="name",placeholder="Enter your name")
+            input(type="text",class="myInput",name ="number",placeholder="Enter your number")
+            input(type="text",class="myInput",name ="email",placeholder="Enter your email")
+            input(type="text",class="myInput",name ="age",placeholder="Enter your age")
+            input(type="text",class="myInput",name ="occupation",placeholder="Enter your occupation")
+            button(class="btn") Submit
