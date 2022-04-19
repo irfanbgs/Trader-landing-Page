@@ -1,7 +1,30 @@
+const { Console } = require("console");
 const express = require("express");
+const mongoose = require('mongoose'); // importing mongoose 
+mongoose.connect('mongodb://localhost/irfanTraders',{useNewUrlParser:true}); // connectiong to mongoose database
 const app = express();
-const path = require("path");
 const port = 80;
+const path = require("path");
+const bodparser = require("body-parser")
+var db = mongoose.connection;
+db.on('error',console.error.bind(console,'connection error:'))
+
+//Defining the schema for the database
+const traderSchema = new mongoose.Schema({
+    name: String,
+    number: String,
+    email: String,
+    age: String,
+    occupation: String
+  });
+
+//Creating models of that schema
+const traders = mongoose.model('tradercollections',traderSchema);
+
+//Creating documents
+// const tradeIrfan = new traders({name:'tradingTrek'});
+
+
 
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
@@ -19,6 +42,14 @@ app.get('/', (req, res)=>{
 app.get('/contact', (req, res)=>{
     const params = {}
     res.status(200).render('contact.pug', params);
+})
+app.post('/contact', (req, res)=>{
+    var myData = new traders(req.body);
+    myData.save().then(()=>{
+        res.send("This item has been saved to the database")
+    }).catch(()=>{
+        res.status(400).send("Item was not saved to the database")
+    });
 })
 
 // START THE SERVER
