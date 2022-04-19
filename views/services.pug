@@ -1,0 +1,17 @@
+extends base.pug
+
+block scripts 
+    script(src="'/static/index.js") 
+
+block style 
+    style 
+        include ../static/style.css
+        include ../static/servicesStyle.css
+
+block content
+    div#maincontainer 
+        h1 Get the help you need
+        p Learn Trading the simple way
+        button(class="btn") Get Started
+    #youtubeBox 
+        p THis is the youtube channel sextion    
