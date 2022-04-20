@@ -47,6 +47,10 @@ app.get('/contact', (req, res)=>{
     const params = {}
     res.status(200).render('contact.pug', params);
 })
+app.get('/aboutus', (req, res)=>{
+    const params = {}
+    res.status(200).render('aboutus.pug', params);
+})
 app.post('/contact', (req, res)=>{
     var myData = new traders(req.body);
     myData.save().then(()=>{
@@ -60,3 +64,4 @@ app.post('/contact', (req, res)=>{
 app.listen(port, ()=>{
     console.log(`The application started successfully on port ${port}`);
 });
+

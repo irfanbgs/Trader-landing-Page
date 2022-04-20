@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 350px;
     font-family: 'Ubuntu', sans-serif;  
 }
 #maincontainer::before{
@@ -44,15 +44,24 @@
 }
 
 #youtubeBox{
-    background-color: aqua;
-    width: 200px;
-    height: 200px;
     position: absolute;
     right: 50px;
 }
-#youtubeBox{
-
+#youtubeBox iframe{
+    width: 300px;
+    height: 200px;
 }
-#youtubeBox{
-
+#youtubeBox h3{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 2px 3px;
+    margin: 6px 3px;
+}
+#podcasts img{
+    position: absolute;
+    top:250px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
 }

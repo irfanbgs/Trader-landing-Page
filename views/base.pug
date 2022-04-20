@@ -1,9 +1,9 @@
-//- layout.pug
+//- base.pug
 html
   head
     title Trading Trek
     block style
-    block scripts
+    
 
   body
     nav#navigation 
@@ -12,9 +12,10 @@ html
               img(src='../static/logo.png')
             li #[a(href="/") Home]
             li #[a(href="/services") Services]
-            li #[a(href="/") About us]
+            li #[a(href="/aboutus") About us]
             li #[a(href="/") Class Info]
             li #[a(href="/contact") Contact]
     block content
+    block scripts
     section#Footer 
         footer#footer © 2022 Tradingtrek.com. All rights reserved

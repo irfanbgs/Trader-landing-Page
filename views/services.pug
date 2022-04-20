@@ -1,7 +1,6 @@
 extends base.pug
 
-block scripts 
-    script(src="'/static/index.js") 
+ 
 
 block style 
     style 
@@ -14,4 +13,9 @@ block content
         p Learn Trading the simple way
         button(class="btn") Get Started
     #youtubeBox 
-        p THis is the youtube channel sextion    
+        iframe(src="https://www.youtube.com/embed/-eA6utnkF1c",allowfullscreen, frameborder="0") 
+        h3 Our Youtube Channel
+    #podcasts 
+        img(src="/static/play.jpg", alt="",id="playPodcast")
+block scripts 
+    script(src="/static/index.js")
