@@ -51,6 +51,10 @@ app.get('/aboutus', (req, res)=>{
     const params = {}
     res.status(200).render('aboutus.pug', params);
 })
+app.get('/classinfo', (req, res)=>{
+    const params = {}
+    res.status(200).render('classinfo.pug', params);
+})
 app.post('/contact', (req, res)=>{
     var myData = new traders(req.body);
     myData.save().then(()=>{
